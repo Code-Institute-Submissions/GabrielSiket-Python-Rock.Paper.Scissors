@@ -20,6 +20,25 @@ while True:
     computer_pick = selection[random_num]
     print("Computer picked", computer_pick + "!")
 
+    if user_input == "rock" and computer_pick == "scissors":
+        print("Congratulations, you win!")
+        user_score += 1
+
+    elif user_input == "papper" and computer_pick == "rock":
+        print("Congratulations, you win!")
+        user_score += 1
+
+    elif user_input == "scissors" and computer_pick == "paper":
+        print("Congratulations, you win!")
+        user_score += 1
+    
+    elif user_input == computer_pick:
+        print("It's a draw!")
+    
+    else:
+        print("Sorry, you lost!")
+        computer_score += 1
+
 
 print("Thanks for playing!")
 
