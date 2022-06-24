@@ -1,10 +1,16 @@
 import random
 
-name = input("Hello! What is your name?: ").capitalize()
-print(f"Welcome {name}, let's play!")
-
 user_score = 0
 computer_score = 0
+
+name = input("Hello! What is your name?: ").capitalize()
+# This will make sure to have only letters in the name
+while name.isalpha() is False:
+    print("Do not use numbers or spaces!")
+    print(f"Only letters are required, you provided: {name}")
+    name = input("Please enter your name again: ")
+
+print(f"Welcome {name}, let's play!\n")
 
 selection = ["rock", "paper", "scissors"]
 
