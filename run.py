@@ -9,7 +9,7 @@ while True:
     user_input = input("Make a choice: Rock, Paper, Scissors or Quit?: ").lower()
     if user_input == "quit":
         print("Sorry to see you go!")
-        quit()
+        break
 
     if user_input not in selection:
         print("Please make a valid selection!")
@@ -39,6 +39,7 @@ while True:
         print("Sorry, you lost!")
         computer_score += 1
 
-
+print("You won", user_score, "time(s).")
+print("You won", computer_score, "time(s).")
 print("Thanks for playing!")
 
