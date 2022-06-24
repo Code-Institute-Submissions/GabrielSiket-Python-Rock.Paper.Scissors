@@ -1,13 +1,16 @@
 import random
 
+name = input("Hello! What is your name?: ").capitalize()
+print(f"Welcome {name}, let's play!")
+
 user_score = 0
 computer_score = 0
 
 selection = ["rock", "paper", "scissors"]
 
 while True:
-    user_input = input("Make a choice: Rock, Paper, Scissors or Quit?: ").lower()
-    if user_input == "quit":
+    user_input = input("Make a choice: Rock, Paper, Scissors or Q?: ").lower()
+    if user_input == "q":
         print("Sorry to see you go!")
         break
 
@@ -24,7 +27,7 @@ while True:
         print("Congratulations, you win!")
         user_score += 1
 
-    elif user_input == "papper" and computer_pick == "rock":
+    elif user_input == "paper" and computer_pick == "rock":
         print("Congratulations, you win!")
         user_score += 1
 
@@ -40,6 +43,6 @@ while True:
         computer_score += 1
 
 print("You won", user_score, "time(s).")
-print("You won", computer_score, "time(s).")
+print("Computer won", computer_score, "time(s).")
 print("Thanks for playing!")
 
