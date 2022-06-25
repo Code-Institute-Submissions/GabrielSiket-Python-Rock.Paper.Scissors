@@ -8,16 +8,26 @@ name = input("Hello! What is your name?: ").capitalize()
 while name.isalpha() is False:
     print("Do not use numbers or spaces!")
     print(f"Only letters are required, you provided: {name}")
-    name = input("Please enter your name again: ")
+    name = input("Please enter your name again: ").capitalize()
 
 print(f"Welcome {name}, let's play!\n")
 
 selection = ["rock", "paper", "scissors"]
 
+def checkWinner(user_score, computer_score):
+    if user_score > computer_score:
+        print("Congratulations, you are the winner !")
+    elif computer_score > user_score:
+        print("Sorry, you lost. Better luck next time!")
+    else:
+        print("It's a draw, try again!")
+
 while True:
     user_input = input("Make a choice: Rock, Paper, Scissors or Q?: ").lower()
     if user_input == "q":
-        print("Sorry to see you go!")
+        print("You won", user_score, "time(s).")
+        print("Computer won", computer_score, "time(s).")
+        checkWinner(user_score, computer_score)
         break
 
     if user_input not in selection:
@@ -48,7 +58,4 @@ while True:
         print("Sorry, you lost!")
         computer_score += 1
 
-print("You won", user_score, "time(s).")
-print("Computer won", computer_score, "time(s).")
 print("Thanks for playing!")
-
