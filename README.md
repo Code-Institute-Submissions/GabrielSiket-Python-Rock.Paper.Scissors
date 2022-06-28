@@ -1,31 +1,83 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Python Rock Paper Scissors
 
-Welcome Gabriel S,
+#### This classic "Rock Paper Scissors" is a Python terminal game, wich runs is the Code Institute mock terminal on Heroku.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Rock, Paper, scissors is a hand game originating from China.
 
-## Reminders
+[Live link to the game can be found here.](https://python-rock-paper-scissors.herokuapp.com/)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+![Responsive](images/responsive-python-rps.png)
 
-## Creating the Heroku app
+## Table of Contents 
+1. [Game Rules](#1-game-rules)
+2. [Features](#2-features)
+3. [Testing](#3-testing)
+4. [Deployment](#4-deployment)
+5. [Credits](#5-credits)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## 1. Game Rules
 
-1. `heroku/python`
-2. `heroku/nodejs`
+This Game is usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock" (a closed fist), "paper" (a flat hand), and "scissors" (a fist with the index finger and middle finger extended, forming a V). "Scissors" is identical to the two-fingered V sign (also indicating "victory" or "peace") except that it is pointed horizontally instead of being held upright in the air.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## 2. Features
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Existing Features
 
-Connect your GitHub repository and deploy as normal.
+- When the game starts, the user is asked to input their name.
 
-## Constraints
+    <details>
+    <summary>"Hello! What is your name?"</summary>
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+    ![name](images/python-welcome.png)
+    </details>
 
------
-Happy coding!
+- A valid name format is required that must be formed of letters only.
+
+    <details>
+    <summary>"Do not use numbers or spaces!"</summary>
+
+    ![invalid-name](images/python-name-error.png)
+    </details>
+
+- Once a valid name is provided, the user is asked to choose one of the following options: Rock, Paper, Scissors or Q (Quit).
+
+    <details>
+    <summary>Start Game</summary>
+
+    ![options](images/python-valid-name.png)
+    </details>
+
+- After the game is played and the user chooses to quit, the result will be shown.
+
+    <details>
+    <summary>Result</summary>
+
+    ![result](images/python-game.png)
+    </details>
+
+### Features to implement
+-  Add the lizard, wizard and spock
+
+## 3. Testing
+
+I have manually tested this project by:
+* Passing it through PEP8 linter and confirm that everything is all right.
+* Giving invalid inputs: numbers where strings are required etc.
+
+## 4. Deployment
+
+This project was deployed using Code Institute's mock terminal to Heroku.
+
+* Steps for deployement:
+
+    * Clone this repository.
+    * Create new Heroku App.
+    * Set the buildbacks to Python and NodeJS.
+    * Link the Heroku App to the repository.
+    * Click on Deploy.
+
+## 5. Credits
+
+* Code Institute for the deployment terminal.
+* [Tim Ruscica](https://github.com/techwithtim) for better understanding and use of Python.
+* [Wikipedia](https://www.wikipedia.org/) for details about the game.

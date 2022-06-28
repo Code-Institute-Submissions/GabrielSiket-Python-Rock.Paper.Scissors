@@ -14,6 +14,7 @@ print(f"Welcome {name}, let's play!\n")
 
 selection = ["rock", "paper", "scissors"]
 
+
 def checkWinner(user_score, computer_score):
     if user_score > computer_score:
         print("Congratulations, you are the winner !")
@@ -33,7 +34,7 @@ while True:
     if user_input not in selection:
         print("Please make a valid selection!")
         continue
-    
+
     random_num = random.randint(0, 2)
     # rock is 0, paper is 1 and scissors is 2
     computer_pick = selection[random_num]
@@ -42,18 +43,14 @@ while True:
     if user_input == "rock" and computer_pick == "scissors":
         print("Congratulations, you win!")
         user_score += 1
-
     elif user_input == "paper" and computer_pick == "rock":
         print("Congratulations, you win!")
         user_score += 1
-
     elif user_input == "scissors" and computer_pick == "paper":
         print("Congratulations, you win!")
         user_score += 1
-    
     elif user_input == computer_pick:
         print("It's a draw!")
-    
     else:
         print("Sorry, you lost!")
         computer_score += 1
